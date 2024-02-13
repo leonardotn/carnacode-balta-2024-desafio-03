@@ -1,25 +1,32 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Projeto\\CarnaCode\\carnacode-balta-2024-desafio-03\\Imc\\Imc.csproj": {}
+    "C:\\Projeto\\carnacode-balta-2024-desafio-03\\Imc\\Imc.csproj": {}
   },
   "projects": {
-    "C:\\Projeto\\CarnaCode\\carnacode-balta-2024-desafio-03\\Imc\\Imc.csproj": {
+    "C:\\Projeto\\carnacode-balta-2024-desafio-03\\Imc\\Imc.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Projeto\\CarnaCode\\carnacode-balta-2024-desafio-03\\Imc\\Imc.csproj",
+        "projectUniqueName": "C:\\Projeto\\carnacode-balta-2024-desafio-03\\Imc\\Imc.csproj",
         "projectName": "Imc",
-        "projectPath": "C:\\Projeto\\CarnaCode\\carnacode-balta-2024-desafio-03\\Imc\\Imc.csproj",
+        "projectPath": "C:\\Projeto\\carnacode-balta-2024-desafio-03\\Imc\\Imc.csproj",
         "packagesPath": "C:\\Users\\leotn\\.nuget\\packages\\",
-        "outputPath": "C:\\Projeto\\CarnaCode\\carnacode-balta-2024-desafio-03\\Imc\\obj\\",
+        "outputPath": "C:\\Projeto\\carnacode-balta-2024-desafio-03\\Imc\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\leotn\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\leotn\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -38,6 +45,10 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "Blazored.LocalStorage": {
+              "target": "Package",
+              "version": "[4.5.0, )"
+            },
             "Microsoft.AspNetCore.Components.WebAssembly": {
               "target": "Package",
               "version": "[8.0.1, )"

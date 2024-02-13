@@ -1,9 +1,12 @@
 ﻿@page "/"
 @page "/index"
+@using Blazored.LocalStorage
 @inject NavigationManager NavigationManager
+@inject ILocalStorageService LocalStorageService
 
 <div class="painel">
-<EditForm Model="calculo" class="form">
+    <div class="formulario">
+<EditForm Model="calculo">
     <div class="title">
         <h1>Cálculo de IMC</h1>
     </div>
@@ -21,4 +24,5 @@
         <button class="btn">Entenda o cálculo</button>
     </div>
 </EditForm>
+</div>
 </div>

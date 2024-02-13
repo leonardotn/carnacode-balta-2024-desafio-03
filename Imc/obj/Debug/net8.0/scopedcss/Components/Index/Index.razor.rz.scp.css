@@ -1,14 +1,14 @@
+
 .painel[b-c2k13p9xtg] {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
     font-family: "Inter", sans-serif;
-    width: 400px;
-    background-color: blue;
+    background-color: white;
+    height: 600px;
 }
-
-.form[b-c2k13p9xtg] {
+.formulario[b-c2k13p9xtg] {
+    margin: auto;
     width: 400px;
 }

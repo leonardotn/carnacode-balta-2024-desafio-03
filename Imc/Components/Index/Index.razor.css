@@ -1,9 +1,14 @@
+
 .painel {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
     font-family: "Inter", sans-serif;
+    background-color: white;
+    height: 600px;
+}
+.formulario {
+    margin: auto;
     width: 400px;
 }

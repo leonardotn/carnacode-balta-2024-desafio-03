@@ -1,5 +1,10 @@
-  @page "/history"
-  <div class="logo-content logo-content-min-size">
+@page "/history"
+@using Blazored.LocalStorage
+@using Imc.Enums
+@inject ILocalStorageService LocalStorageService
+
+<div class="container">
+    <div class="logo-content logo-content-min-size">
         <img class="logo" width="95" src="../icon-no-bg.png" alt="imc-logo">
     </div>
 
@@ -11,30 +16,27 @@
         <input type="text" class="form-text form-search" placeholder="Pesquisar..." />
     </div>
 
-    <div class="history-area">
-        <div class="content-block"></div>
-        <div class="history-header-weight">
-            <span>Peso ideal ✅</span>
+    @foreach (var historico in historicos)
+    {
+        <div class="history-area">
+            <div class="content-block"></div>
+            <div class="history-header-weight">
+                @if (historico.StatusPeso == StatusPeso.PesoIdeal)
+                {
+                    <span>Peso ideal ✅</span>
+                }
+                @if (historico.StatusPeso == StatusPeso.SobrePeso)
+                {
+                    <span>Sobrepeso ⛔️</span>
+                }                
+            </div>
+            <div class="history-header-time">
+                <span class="time">@RetornaDataFormatada(historico.DataInclusao)</span>
+            </div>
+            <div class="description">
+                <p>@historico.Descricao</p>
+            </div>
+            <div class="line-divider"></div>
         </div>
-        <div class="history-header-time">
-            <span class="time">8m atrás</span>
-        </div>
-        <div class="description">
-            <p>Parabéns, você está no seu peso ideal, continue mantendo este estilo!</p>
-        </div>
-        <div class="line-divider"></div>
-    </div>
-
-    <div class="history-area">
-        <div class="content-block"></div>
-        <div class="history-header-weight">
-            <span>Sobrepeso ⛔️</span>
-        </div>
-        <div class="history-header-time">
-            <span class="date">12/10/2023</span>
-        </div>
-        <div class="description">
-            <p>Estamos quase lá! Faça alguns ajustes para ficar no peso ideal!</p>
-        </div>
-        <div class="line-divider"></div>
-    </div>
+    }
+</div>
