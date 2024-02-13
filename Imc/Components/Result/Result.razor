@@ -1,0 +1,35 @@
+@page "/result"
+@page "/result/{Resultado}"
+@inject NavigationManager NavigationManager
+    <div class="container">
+        <div class="logo-content logo-content-min-size position-logo margin-login-result">
+            <img class="logo" width="95" src="../assets/icon-no-bg.png" alt="imc-logo">
+        </div>
+        <div class="content-box">
+            <div class="title">
+                @if (ResultadoImc)
+                {
+                    <h1>✅ Parabéns!</h1>
+                }
+                @if (!ResultadoImc)
+                {
+                    <h1>⛔ Sobrepeso</h1>
+                }
+            </div>
+
+            <div class="sub-title">
+                @if (ResultadoImc)
+                {
+                    <p>Você está no peso ideal, continue mantendo este estilo!</p>
+                }
+                @if (!ResultadoImc)
+                {
+                    <p>Cuidado você está com sobrepeso, dê uma atenção para sua saúde</p>
+                }
+            </div>
+
+            <div class="group">
+                <button class="btn" @onclick='() => AvancarProximaPagina("/history")'>Ver meu histórico</button>
+            </div>
+        </div>
+    </div>

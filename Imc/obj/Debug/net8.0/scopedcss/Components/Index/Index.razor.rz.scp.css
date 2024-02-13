@@ -1,0 +1,14 @@
+.painel[b-c2k13p9xtg] {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: "Inter", sans-serif;
+    width: 400px;
+    background-color: blue;
+}
+
+.form[b-c2k13p9xtg] {
+    width: 400px;
+}

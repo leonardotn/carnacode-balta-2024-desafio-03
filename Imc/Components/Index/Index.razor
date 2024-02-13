@@ -1,0 +1,24 @@
+﻿@page "/"
+@page "/index"
+@inject NavigationManager NavigationManager
+
+<div class="painel">
+<EditForm Model="calculo" class="form">
+    <div class="title">
+        <h1>Cálculo de IMC</h1>
+    </div>
+    <div class="group">
+        <InputText type="number" class="form-text form-text-input" placeholder="Altura" @bind-Value="calculo.Altura"/>
+        <InputText type="number" class="form-text form-text-input" placeholder="Peso" @bind-Value="calculo.Peso"/>
+        <InputText type="text" class="form-text form-text-input" placeholder="Sexo" @bind-Value="calculo.Sexo"/>
+    </div>
+    <div class="chk-box-group">
+        <input type="checkbox" id="chk-box">
+        <label for="chk-box">Eu tenho 65 anos ou mais</label>
+    </div>
+    <div class="group">
+        <button class="btn" @onclick="CalcularImc">Calcular meu IMC</button>
+        <button class="btn">Entenda o cálculo</button>
+    </div>
+</EditForm>
+</div>
